@@ -6,5 +6,6 @@
     <p><%= x.subtitle %></p> 
     <p><%= x.body %></p>
     <%= image_tag x.thumb_image unless x.thumb_image.nil? %>
+    <%= link_to "Edit", edit_portfolio_path(x) %>
     <br>
 <% end %>
