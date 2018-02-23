@@ -1,6 +1,8 @@
 class PortfoliosController < ApplicationController
   def index
     @portfolio_items = Portfolio.all
+    # @portfolio_items = Portfolio.angular
+    # @portfolio_items = Portfolio.ruby_on_rails_portfolio_items
   end
 
   def new
@@ -25,7 +27,7 @@ class PortfoliosController < ApplicationController
 
   def update
     @portfolio_item = Portfolio.find(params[:id])
-    
+
     respond_to do |format|
       if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
         format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully updated.' }
