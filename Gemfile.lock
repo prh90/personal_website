@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/prh90/hernandez_view_tool
+  revision: 135546f8d690a56ca7e5c40fae48f2a8e0ee0f59
+  specs:
+    hernandez_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -195,6 +201,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.4, >= 4.4.1)
   friendly_id (~> 5.1.0)
+  hernandez_view_tool!
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
