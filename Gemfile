@@ -60,3 +60,5 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 
 gem 'hernandez_view_tool', git: "https://github.com/prh90/hernandez_view_tool"
+
+gem 'petergate', '~> 1.6', '>= 1.6.3'
