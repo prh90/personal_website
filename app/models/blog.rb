@@ -6,4 +6,8 @@ class Blog < ApplicationRecord
 
   validates_presence_of :title, :body
   belongs_to :topic, optional: true
+
+  def self.by_newest
+    order("created_at DESC")
+  end
 end
