@@ -21,10 +21,10 @@ class PortfoliosController < ApplicationController
   end
 
   def create
-    @portfolio = Portfolio.new(portfolio_params)
+    @portfolio_item = Portfolio.new(portfolio_params)
 
     respond_to do |format|
-      if @portfolio.save
+      if @portfolio_item.save
         format.html { redirect_to portfolios_path, notice: ' Your portfolio was created'}
       else
         format.html {render :new}
