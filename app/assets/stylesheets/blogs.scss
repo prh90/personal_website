@@ -177,3 +177,30 @@ h6, .h6 {
  .social-links li {
    font-size: 3em;
  }
+
+ #comments {
+   padding: 50px;
+ }
+
+ .comment-card {
+   padding-top: 20px;
+ }
+
+ .comment-card > .card {
+   padding: 10px;
+ }
+
+ .row > #content {
+   padding-left: 20px;
+ }
+
+ .row > #l_name {
+   padding-left: 15px;
+   text-decoration: underline;
+   font-size: 15px;
+   font-style: italic;
+ }
+
+ #l_name > .name {
+   font-weight: bold;
+ }
