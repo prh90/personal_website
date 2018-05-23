@@ -6,7 +6,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(5).by_newest
+    if logged_in?(:site_admin)
+      @blogs = Blog.page(params[:page]).per(5).by_newest
+    else
+      @blogs = Blog.published.page(params[:page]).per(5).by_newest
+    end
     @page_title = "My Portfolio Blog"
   end
 
