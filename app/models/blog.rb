@@ -4,7 +4,8 @@ class Blog < ApplicationRecord
   friendly_id :title, use: :slugged
   # What this does is that it swaps in the title in for whats in place now.
 
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
+
   belongs_to :topic, optional: true
   has_many :comments, dependent: :destroy
 
