@@ -5,6 +5,13 @@
   </div>
 
   <div class="sidebar-module">
+    <h4>Topics</h4>
+    <% @set_sidebar_topics.each do |topic| %>
+      <p><%= link_to topic.title, topic_path(topic) %></p>
+    <% end %>
+  </div>
+
+  <div class="sidebar-module">
     <h4>Songs</h4>
     <iframe src="https://open.spotify.com/embed/user/1234000160/playlist/0CH7cs6SGi3MgUS9m3zoEs" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     <h4>Elsewhere</h4>
