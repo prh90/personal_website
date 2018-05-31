@@ -23,4 +23,12 @@ module BlogsHelper
     markdown_to_html.render(text).html_safe
 
   end
+
+  def blog_status_color(blog)
+    if blog.draft?
+      'color: red'
+    elsif blog.published?
+      'color: green'
+    end
+  end
 end
