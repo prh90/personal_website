@@ -1,11 +1,19 @@
-<div class="blog-masthead">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark blog-nav">
+
   <div class="container">
-    <nav class="nav blog-nav">
+    <%= link_to "Pablo Hernandez", root_path, class: "navbar-brand" %>
 
-      <%= nav_helper('nav-link','span') %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <%= login_helper 'nav-link'%>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <%= nav_helper('nav-link','li') %>
+        <%= login_helper('nav-link') %>
+      </ul>
+    </div>
 
-    </nav>
   </div>
-</div>
+
+</nav>
