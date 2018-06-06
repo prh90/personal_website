@@ -217,3 +217,15 @@ h6, .h6 {
  .blog-sidebar-source {
    margin-top: 20px;
  }
+
+ .sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  z-index: 0;
+}
+
+.blog-sidebar, .blog-main {
+  z-index: -1;
+}
