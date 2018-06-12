@@ -16,29 +16,38 @@ User.create!(
 
 puts "1 Admin User Created!"
 
+topics = ["Rails", "Ruby", "Web Development", "Daily Life", "Python"]
 
-3.times do |topic|
+topics.each do |topic|
   Topic.create!(
-    title: "Topic #{topic}"
+    title: "#{topic}"
   )
 end
 
-puts "3 topics created"
+puts "5 topics created"
 
-10.times do |blog|
-  Blog.create!(
-    title: "My Blog Post #{blog}",
-    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-    topic_id: Topic.last.id
-  )
-end
 
-puts "10 blogs created"
+Blog.create!(
+  title: "My Blog First Post",
+  body: "Hello to all! This is my first official post on my new website. I am excited for the world to see what I have worked on for a bit and will for sure continue to improve as I learn new technologies. So far on my journey I have made small projects and this is the biggest one I have made because I have learned how to make this website with clean code and learning alot through the process. So stay and explore my work and keep checking in because I will continue to improve this website.",
+  topic_id: 3
+)
 
-5.times do |skill|
+
+puts "1 blog created"
+
+skills = {
+  "Ruby on Rails" => 80,
+  "Python" => 40,
+  "JavaScript" => 40,
+  "Ruby" => 65,
+  "PostgreSQL" => 55
+}
+
+skills.each do |key, value|
   Skill.create!(
-    title: "Rails #{skill}",
-    percent_utilized: 15
+    title: "#{key}",
+    percent_utilized: value
   )
 end
 
