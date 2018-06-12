@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Ubuntu Condensed', sans-serif;
   color: #555;
 }
 
@@ -24,7 +24,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Ubuntu Condensed', sans-serif;
   font-weight: normal;
   color: #333;
 }
@@ -223,9 +223,5 @@ h6, .h6 {
   position: sticky;
   top: 0;
   padding: 5px;
-  z-index: 0;
-}
-
-.blog-sidebar, .blog-main {
-  z-index: -1;
+  z-index: 1;
 }
