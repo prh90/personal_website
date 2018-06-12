@@ -2,6 +2,26 @@
   <div class="row body-card">
     <div class="col-md-6">
       <%= image_tag "profile_pic.jpg", width: 400, alt: "Profile Image", class: 'profile-pic' %>
+
+      <div class="skills">
+        <% @skills.each do |skill| %>
+          <div class="skill">
+            <h4><%= skill.title %></h4>
+            <div class="progress">
+              <div
+              class="progress-bar progress-bar-striped bg-info"
+              role="progressbar"
+              style="width: <%= skill.percent_utilized %>%"
+              aria-valuenow="<% skill.percent_utilized %>"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              >
+            </div>
+          </div>
+          </div>
+        <% end %>
+      </div>
+
     </div>
 
     <div class="col-md-6">
