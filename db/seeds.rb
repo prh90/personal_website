@@ -5,6 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create!(
+  email: ENV.fetch('ADMIN_EMAIL'),
+  password: ENV.fetch('ADMIN_PASSWORD'),
+  password_confirmation: ENV.fetch('ADMIN_PASSWORD'),
+  name: ENV.fetch('ADMIN_NAME'),
+  roles: ENV.fetch('ADMIN_ROLES')
+)
+
+puts "1 Admin User Created!"
+
+
 3.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"
