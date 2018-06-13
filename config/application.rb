@@ -22,7 +22,7 @@ module PabloPortfolio
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
     config.eager_load_paths << "#{Rails.root}/lib"
-    config.secret_key = ENV["SECRET_KEY_BASE"]
+    # config.secret_key_base = ENV["SECRET_KEY_BASE"]
 
     # Allows all get permitted, not really good. Overrides permit in controller
     # config.action_controller.permit_all_parameters = true
