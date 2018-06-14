@@ -88,4 +88,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Added to configure redis for action_cable
+  config.action_cable.allowed_request_origins = ['https://pablohernandez-portfolio.herokuapp.com', 'http://pablohernandez-portfolio.herokuapp.com']
+  config.action_cable.url = "wss://pablohernandez-portfolio.herokuapp.com/cable"
 end
